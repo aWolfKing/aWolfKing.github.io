@@ -1,6 +1,8 @@
 /*
 Colors:
     #3e444c
+
+    #72788d
 */
 
 .navigation-bar{
@@ -13,6 +15,7 @@ Colors:
 
 body{
     margin: 0px;
+    background-color: #3e444c;
 }
 
 #main-slideshow{
@@ -24,9 +27,21 @@ body{
     background-position: center;
     background-attachment: fixed;
     margin-top: 50px;
+    z-index: -50;
 }
 
 .slideshow-item{
     width: inherit;
     height: inherit;
+}
+
+#scroll-body{
+    min-width: 100%;
+    max-width: 100%;
+    background-color: #72788d;
+    margin-top: 350px;
+    height: 2000px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
 }
