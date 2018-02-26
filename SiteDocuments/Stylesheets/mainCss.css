@@ -8,8 +8,25 @@ Colors:
     height: 50px;
     position: fixed;
     background-color: #3e444c;
+    z-index: 100;
 }
 
 body{
     margin: 0px;
+}
+
+#main-slideshow{
+    width: 100%;
+    position: fixed;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 50px;
+}
+
+.slideshow-item{
+    width: inherit;
+    height: inherit;
 }
