@@ -1,0 +1,13 @@
+/*
+Colors:
+    #3e444c
+*/
+
+.navigation-bar{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: #3e444c;
+    margin-top: -10px;
+    margin-left: -10px;
+}
