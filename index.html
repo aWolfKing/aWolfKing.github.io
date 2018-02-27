@@ -17,21 +17,29 @@
     </div>
     
     
-    <div class="slideshow-container" id="main-slideshow">
+    <iframe class="slideshow-item fade" style="margin-top:48px;position:fixed;height:300px;width:100%;margin-left:-2.5px;z-index:-47"
+            src="https://www.youtube.com/embed/ugs32J8m-ow?autoplay=1&controls=0&loop=1">
+    </iframe> 
     
+    
+    <!--
+    <div class="slideshow-container" id="main-slideshow">
+        
         <div class="slideshow-item fade">
-            <img src="SiteDocuments/Images/Misc/ImageCouldNotLoad.jpg" style="width:100%;height:inherit">  <!--slideshow image-->
-            <div class="text"></div>    <!--slideshow image description-->
+            <img src="SiteDocuments/Images/Misc/ImageCouldNotLoad.jpg" style="width:100%;height:inherit">
+            <div class="text"></div>
         </div>
         
-        <div class="slideshow-button" style="margin-top:-300px;z-index:-49;margin-left:0px;margin-right:auto">
+        <div class="slideshow-button" onclick="mainSlideshow_nextImage(1)" style="margin-top:-300px;z-index:-49;margin-left:0px;margin-right:auto">
             &#10094;
         </div>
-        <div class="slideshow-button" style="margin-top:-300px;z-index:-49;margin-left:auto;margin-right:0px">
+        <div class="slideshow-button" onclick="mainSlideshow_nextImage(-1)" style="margin-top:-300px;z-index:-49;margin-left:auto;margin-right:0px">
             &#10095;
         </div>
         
     </div>
+    -->
+    
     
     
     <div id="scroll-body-background" style="width:100%;background-color:#3e444c;position:absolute;margin-top:350px">
@@ -45,7 +53,14 @@
     
         setScrollBodyWidth();
         
+
+        
         var mainSlideshow_index = 0;
+        var mainSlideshow_ImagePaths = [
+                                            "SiteDocuments/Images/Slideshows/Main/EthanShatter_sized.png",
+                                            "SiteDocuments/Images/Slideshows/Main/TwoPlayerGravityGame_sized.jpg"
+                                       ];
+            
         
         function mobilecheck() {
           var check = false;
@@ -59,8 +74,7 @@
         
         function setScrollBodyWidth(){
             var scrollBody = document.getElementById("scroll-body");
-            
-            console.log(scrollBody.clientHeight.toString().concat("px"));
+
             document.getElementById("scroll-body-background").style.height = scrollBody.clientHeight.toString().concat("px");
             
             if(!mobilecheck()){                     
@@ -75,6 +89,13 @@
         
         function mainSlideshow_nextImage(dir){
             mainSlideshow_index += dir;
+            if(mainSlideshow_index < 0){mainSlideshow_index = mainSlideshow_ImagePaths.length-1;}
+            else if(mainSlideshow_index >= mainSlideshow_ImagePaths.length){mainSlideshow_index = 0;}
+            changeMainSlideshow_image();
+        }
+        
+        function changeMainSlideshow_image(){
+            document.getElementById("main-slideshow").getElementsByClassName("slideshow-item")[0].getElementsByTagName("img")[0].src = mainSlideshow_ImagePaths[mainSlideshow_index];
         }
         
         
