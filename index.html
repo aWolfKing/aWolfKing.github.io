@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
     
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="SiteDocuments/Stylesheets/mainCss.css">
-
+<head>
+    
+    <meta name="theme-color" content="#3e444c">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="SiteDocuments/Stylesheets/mainCss.css">
+    
+</head>
+    
 <body>
 
     
@@ -19,18 +24,28 @@
             <div class="text"></div>    <!--slideshow image description-->
         </div>
         
+        <div class="slideshow-button" style="margin-top:-300px;z-index:-49;margin-left:0px;margin-right:auto">
+            &#10094;
+        </div>
+        <div class="slideshow-button" style="margin-top:-300px;z-index:-49;margin-left:auto;margin-right:0px">
+            &#10095;
+        </div>
+        
     </div>
     
     
     <div id="scroll-body-background" style="width:100%;background-color:#3e444c;position:absolute;margin-top:350px">
-    </div>
+    </div>    
     <div id="scroll-body">
+        
     </div>
     
     
     <script>
     
         setScrollBodyWidth();
+        
+        var mainSlideshow_index = 0;
         
         function mobilecheck() {
           var check = false;
@@ -45,14 +60,23 @@
         function setScrollBodyWidth(){
             var scrollBody = document.getElementById("scroll-body");
             
+            console.log(scrollBody.clientHeight.toString().concat("px"));
+            document.getElementById("scroll-body-background").style.height = scrollBody.clientHeight.toString().concat("px");
+            
             if(!mobilecheck()){                     
                 var width = document.getElementById("scroll-body-background");
                 scrollBody.style.minWidth = "980px";
                 scrollBody.style.maxWidth = "980px";    
-                scrollBody.style.marginLeft = "200px";
+                scrollBody.style.marginLeft = ((document.documentElement.clientWidth-980)/2).toString().concat("px");
             }
             
         }
+        
+        
+        function mainSlideshow_nextImage(dir){
+            mainSlideshow_index += dir;
+        }
+        
         
     
     </script>
