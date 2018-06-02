@@ -17,6 +17,13 @@
 
 
 
+.info-icon{
+    background-image: url("../Images/Icons/Info_logo_small.png");
+    background: url("../Images/Icons/Info_logo_small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .cpp-icon{
     background-image: url("../Images/Icons/Cpp_logo_small.png");
     background: url("../Images/Icons/Cpp_logo_small.png");
@@ -44,6 +51,13 @@
 
 
 
+li .polaroid-sideways{
+    display: block;
+    margin-top: 20px;
+}
+
+
+
 .polaroid-sideways{
     padding-top: 2px;
     background-color: white;
@@ -63,6 +77,18 @@
     outline: none;
     padding: 0;
 }
+
+/*
+.polaroid-sideways .info-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: -56px;
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
 .polaroid-sideways .cs-icon{
     width: 50px;
     height: 50px;
@@ -73,6 +99,30 @@
     background-color: rgba(0,0,0,0);
     border: 0;
 }
+.polaroid-sideways .cpp-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: -56px;
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+*/
+.polaroid-sideways .polaroid-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: -56px;
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+
+
+
 .polaroid-sideways .text-overlay{
     position: absolute;
     margin-top: -300px;
@@ -115,4 +165,10 @@ body{
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+
+
+li{
+    list-style: none;
 }
