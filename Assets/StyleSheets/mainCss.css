@@ -1,0 +1,118 @@
+.color0{
+    /*black*/
+    background-color: #3E444C;
+}
+.color1{
+    /*grey*/
+    background-color: #72788D;
+}
+.color2{
+    /*blue*/
+    background-color: #7A89C2;
+}
+.color3{
+    /*purple*/
+    background-color: #AFA2FF;
+}
+
+
+
+.cpp-icon{
+    background-image: url("../Images/Icons/Cpp_logo_small.png");
+    background: url("../Images/Icons/Cpp_logo_small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cs-icon{
+    background-image: url("../Images/Icons/Cs_logo_small.png");
+    background: url("../Images/Icons/Cs_logo_small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cpp-icon-big{
+    background-image: url("../Images/Icons/Cpp_logo.png");
+    background: url("../Images/Icons/Cpp_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cs-icon-big{
+    background-image: url("../Images/Icons/Cs_logo.png");
+    background: url("../Images/Icons/Cs_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.polaroid-sideways{
+    padding-top: 2px;
+    background-color: white;
+    height: 298px;
+    width: 350px;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+.polaroid-sideways img{
+    display: block;
+    margin-top: -54px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0);
+    width: 300px;
+    height: 300px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+.polaroid-sideways .cs-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: -56px;
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+.polaroid-sideways .text-overlay{
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    width: 0px;
+    height: 300px;
+    background-color: white;
+    border: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.polaroid-sideways:hover .text-overlay{
+    width: 300px;
+}
+.polaroid-sideways .text-overlay .text{
+    color: #3E444C;
+    /*color: transparent;*/
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 150px;
+    transform: translate(-50%, -50%);
+}
+.polaroid-sideways:hover .text-overlay .text{
+    color: #3E444C;
+}
+
+
+
+.box-100px{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
