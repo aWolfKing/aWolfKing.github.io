@@ -1,3 +1,24 @@
+/*Mobile*/
+@media only screen and (max-width: 991px){
+    .pc-only{
+        display: none;
+    }
+    .mobile-only{
+        /*display: inherit;*/
+    }
+}
+/*Desktop/Laptop*/
+@media only screen and (min-width: 992px){
+    .pc-only{
+        /*display: inherit;*/
+    }   
+    .mobile-only{
+        display: none;
+    }
+}
+
+
+
 .color0{
     /*black*/
     background-color: #3E444C;
@@ -154,6 +175,28 @@ li .polaroid-sideways{
 
 
 
+.page-preview-holder{
+    position: fixed;
+    right: 0px;
+    width: 1050px;
+    height: auto;
+    top: 20px;
+    bottom: 20px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.page-preview{
+    position: fixed;
+    right: 100px;
+    width: 900px;
+    height: auto;
+    top: 30px;
+    bottom: 30px;
+    border-radius: 5px;
+}
+
+
+
 .box-100px{
     width: 100px;
     height: 100px;
@@ -172,4 +215,10 @@ body{
 
 li{
     list-style: none;
+}
+
+
+
+.hidden{
+    display: none;
 }

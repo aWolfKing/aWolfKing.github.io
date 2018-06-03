@@ -12,6 +12,7 @@
     
 <body class="color0">
 
+    <div class="pc-only" id="pc test" style="width:0px;height:0px;"><textarea class="hidden content_replace"></textarea></div>
     
     <!--
     <div class="polaroid-sideways">
@@ -32,7 +33,7 @@
     <div class="color1" style="margin-top:0px;margin-bottom:0px;width:100px;position:absolute;height:auto;">
         <ul>
         <li>
-            <div class="polaroid-sideways">
+            <div class="polaroid-sideways" draggable="true" ondragstart="drag_pagePreview(event)">
                 <div class="info-icon polaroid-icon"></div>
                 <img src="Assets/Images/Fallback/white_pixel.jpg" alt=" ">
                 <a class="text-overlay" href="Pages/Test.html">
@@ -46,7 +47,7 @@
         </li>
             
         <li>
-            <div class="polaroid-sideways">
+            <div class="polaroid-sideways" draggable="true" ondragstart="drag_pagePreview(event)">
                 <div class="cs-icon polaroid-icon"></div>
                 <img src="Assets/Images/Fallback/white_pixel.jpg" alt=" ">
                 <a class="text-overlay" href="Pages/Test.html">
@@ -60,7 +61,7 @@
         </li>
             
         <li>
-            <div class="polaroid-sideways">
+            <div class="polaroid-sideways" draggable="true" ondragstart="drag_pagePreview(event)">
                 <div class="cs-icon polaroid-icon"></div>
                 <img src="Assets/Images/Fallback/white_pixel.jpg" alt=" ">
                 <a class="text-overlay" href="Pages/Test.html">
@@ -75,6 +76,128 @@
             
         </ul>
     </div>
+    
+    
+    
+    <div class="pc-only">
+        <textarea class="hidden content_replace">
+        <div class="page-preview-holder color1" ondragover="allowDrop_pagePreview(event)" ondrop="drop_pagePreview(event)">
+            <div class="page-preview" style="background-color:transparent;overflow:hidden;">
+            <iframe id="page preview frame" src="Index.html" style="width:918px;height:100%;overflow:scroll;border:none;"></iframe>    
+            </div>
+        </div>
+        </textarea>
+    </div>
+        
+    
+    
+    
+    
+    <script>
+    
+        var dragObj = null;
+        var isPC = false;
+        
+        
+        
+        CheckForPC();
+        
+        Mobile_DisablePolaroidDragging();
+        
+        ReplaceContent();
+                
+        
+        
+        function CheckForPC(){
+            isPC = document.getElementById("pc test").style.display != "none";
+            console.log("is pc: ".concat( isPC.toString() ));
+        }
+        
+        
+        
+        function Mobile_DisablePolaroidDragging(){
+            if(!isPC){
+                var polaroids = document.getElementsByClassName("polaroid-sideways");
+                var i;
+                for(i=0;i<polaroids.length;i++){
+                    polaroids[i].setAttribute("draggable", "false");
+                }
+            }
+        }
+        
+        
+        
+        /*Replaces all content of pc- and mobile-only elements with the content of their textareas.*/
+        function ReplaceContent(){
+            var elem = document.getElementsByClassName("pc-only");
+            var elem2 = document.getElementsByClassName("mobile-only");
+            
+            var p
+            for(p=0;p<elem2.length;p++){
+                elem.add(elem2[p]);
+            }
+            
+            var i;
+            for(i=0;i<elem.length;i++){
+                if(elem[i].style.display != "none"){
+                    
+                    var replace_content = elem[i].getElementsByClassName("content_replace");
+                    var content = "";
+                    content = content.concat( replace_content[0].value );
+                    
+                    elem[i].innerHTML = content;
+                }
+            }
+        }
+    
+        
+        
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        
+        
+        
+        function allowDrop_pagePreview(ev){
+            var i;
+            var data = ev.dataTransfer.getData("text");
+            var classes = dragObj.classList;
+            for(i=0;i<classes.length;i++){
+                if(classes[i] == "polaroid-sideways"){
+                    ev.preventDefault(); 
+                    break;
+                }
+            }
+        }
+        
+        function drag_pagePreview(ev) {
+            dragObj = ev.target;
+        }
+
+        function drop_pagePreview(ev) {
+            ev.preventDefault();
+            
+            var iframe = document.getElementById("page preview frame");
+            if(iframe != null){
+                /*iframe.src = "https://awolfking.github.io/";*/
+                iframe.src = dragObj.getElementsByClassName("text-overlay")[0].href;
+            }
+            
+            dragObj = null;
+        }
+        
+    </script>
+    
     
     
 </body>
