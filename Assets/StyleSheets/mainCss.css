@@ -69,6 +69,18 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.unity-icon{
+    background-image: url("../Images/Icons/Unity_logo_small.png");
+    background: url("../Images/Icons/Unity_logo_small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.unity-icon-big{
+    background-image: url("../Images/Icons/Unity_logo.png");
+    background: url("../Images/Icons/Unity_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 
 
@@ -79,17 +91,56 @@ li .polaroid-sideways{
 }
 
 
+.icon-list{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    height: 300px;
+    width: 0px;
+    margin-right: -56px;
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list li{
+    position: relative;
+    width: 0px;
+    height: 50px;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+
+
 
 .polaroid-sideways{
-    padding-top: 2px;
+    padding-top: 0px;
     background-color: white;
-    height: 298px;
+    height: 300px;
     width: 350px;
     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 .polaroid-sideways img{
+    position: absolute;
     display: block;
-    margin-top: -54px;
+    margin-top: 0px;
+    margin-left: /*50px*/ 0px;
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0);
+    width: 300px;
+    height: 300px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+
+.polaroid-sideways .hover-field{
+    position: absolute;
+    display: block;
+    margin-top: 0px;
     margin-left: 50px;
     margin-bottom: 0px;
     background-color: rgba(0,0,0,0);
@@ -99,6 +150,7 @@ li .polaroid-sideways{
     outline: none;
     padding: 0;
 }
+
 
 /*
 .polaroid-sideways .info-icon{
@@ -133,6 +185,7 @@ li .polaroid-sideways{
 }
 */
 .polaroid-sideways .polaroid-icon{
+    position: absolute;
     width: 50px;
     height: 50px;
     margin-top: 2px;
@@ -147,8 +200,8 @@ li .polaroid-sideways{
 
 .polaroid-sideways .text-overlay{
     position: absolute;
-    margin-top: -300px;
-    margin-left: 50px;
+    margin-top: 0px;
+    margin-left: /*50px*/ 0px;
     margin-bottom: 0px;
     width: 0px;
     height: 300px;
@@ -157,19 +210,28 @@ li .polaroid-sideways{
     overflow: hidden;
     transition: 0.5s ease;
 }
+/*
 .polaroid-sideways:hover .text-overlay{
     width: 300px;
 }
+*/
+
+.polaroid-sideways .hover-field:hover .text-overlay{
+    width: 300px;
+}
+
 .polaroid-sideways .text-overlay .text{
     color: #3E444C;
     /*color: transparent;*/
     position: absolute;
-    text-align: center;
+    text-align: left;
     top: 50%;
     left: 150px;
     transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow-x: hidden;
 }
-.polaroid-sideways:hover .text-overlay .text{
+.polaroid-sideways .hover-field:hover .text-overlay .text{
     color: #3E444C;
 }
 
