@@ -38,6 +38,16 @@
 
 
 
+.subtle-link{
+    color: #556EED;
+    text-decoration: none; 
+}
+.subtle-link:hover{
+    color: #77B1EA;
+}
+
+
+
 .info-icon{
     background-image: url("../Images/Icons/Info_logo_small.png");
     background: url("../Images/Icons/Info_logo_small.png");
@@ -226,6 +236,7 @@ li .polaroid-sideways{
     overflow: hidden;
     transition: 0.5s ease;
 }
+
 /*
 .polaroid-sideways:hover .text-overlay{
     width: 300px;
