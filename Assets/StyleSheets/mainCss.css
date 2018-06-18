@@ -228,11 +228,20 @@ li .polaroid-sideways{
     top: 50%;
     left: 150px;
     transform: translate(-50%, -50%);
-    white-space: nowrap;
+    /*white-space: nowrap;*/
     overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 300px;
+    max-height: 300px;
 }
 .polaroid-sideways .hover-field:hover .text-overlay .text{
     color: #3E444C;
+}
+
+.polaroid-sideways .text-overlay .text-container{
+    position: absolute;
+    width: 300px;
+    height: 300px;
 }
 
 
