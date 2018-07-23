@@ -91,6 +91,54 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.python-icon{
+    background-image: url("../Images/Icons/Python_logo.png");
+    background: url("../Images/Icons/Python_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.python-icon-big{
+    background-image: url("../Images/Icons/Python_logo.png");
+    background: url("../Images/Icons/Python_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.processing-icon{
+    background-image: url("../Images/Icons/Processing_logo.png");
+    background: url("../Images/Icons/Processing_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.processing-icon-big{
+    background-image: url("../Images/Icons/Processing_logo.png");
+    background: url("../Images/Icons/Processing_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lua-icon{
+    background-image: url("../Images/Icons/Lua_logo.png");
+    background: url("../Images/Icons/Lua_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lua-icon-big{
+    background-image: url("../Images/Icons/Lua_logo.png");
+    background: url("../Images/Icons/Lua_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pico8-icon{
+        background-image: url("../Images/Icons/Pico8_logo.gif");
+    background: url("../Images/Icons/Pico8_logo.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hku-icon{
+    background-image: url("../Images/Icons/HKU_logo_small.png");
+    background: url("../Images/Icons/HKU_logo_small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 
 
