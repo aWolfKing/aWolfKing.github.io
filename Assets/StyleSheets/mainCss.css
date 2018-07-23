@@ -142,8 +142,19 @@
 
 
 
+.polaroid_ul{
+    width: 50vw;
+}
+
+.polaroid_li{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px;
+}
+
+
 li .polaroid-sideways{
-    display: block;
+    display: block;    
     margin-top: 20px;
     margin-left: -20px;
 }
