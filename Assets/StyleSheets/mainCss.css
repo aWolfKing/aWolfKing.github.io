@@ -143,13 +143,13 @@
 
 
 .polaroid_ul{
-    width: 50vw;
+    width: 770px; /*50vw*/
 }
 
 .polaroid_li{
     display: inline-block;
     vertical-align: top;
-    margin-right: 40px;
+    margin-right: 50px;
 }
 
 
