@@ -43,7 +43,7 @@
     <div class="color1" style="position:fixed;height:100%;float:left;width:100px"></div>
     
     <div class="color1" style="margin-top:0px;margin-bottom:0px;width:100px;position:absolute;height:auto;">
-        <ul class="polaroid_ul">
+        <ul class="polaroid_ul" id="polaroid_ul_display">
             
             
         <!-- About me -->
@@ -261,6 +261,8 @@
         
         CheckForPC();
         
+        ChangePolaroidDisplay();
+        
         Mobile_DisablePolaroidDragging();
         
         ReplaceContent();
@@ -272,6 +274,16 @@
             console.log("is pc: ".concat( isPC.toString() ));
         }
         
+        
+        function ChangePolaroidDisplay(){
+            var polaroid_ul = document.getElementById("polaroid_ul_display");
+            if(isPC){
+                polaroid_ul.style.width = "770px";
+            }
+            else{
+                
+            }
+        }
         
         
         function Mobile_DisablePolaroidDragging(){
