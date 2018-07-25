@@ -50,7 +50,7 @@
         <li class="polaroid_li">
             <div class="polaroid-sideways" draggable="true" ondragstart="drag_pagePreview(event)">
                 <ul class="icon-list">
-                    <li><div class="info-icon polaroid-icon"></div></li>
+                    <!-- <li><div class="info-icon polaroid-icon"></div></li> -->
                 </ul>
                 <div class="hover-field">
                 <img src="Assets/Images/Fallback/white_pixel.jpg" alt=" ">
@@ -60,6 +60,30 @@
                         blablabla<br/>
                         blablabla<br/>
                         blablabla<br/>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </li>
+            
+            
+            
+        <!-- Icon explanation -->
+        <li class="polaroid_li">
+            <div class="polaroid-sideways" draggable="true" ondragstart="drag_pagePreview(event)">
+                <ul class="icon-list">
+                    
+                </ul>
+                <div class="hover-field hover-active">
+                <img src="Assets/Images/Fallback/white_pixel.jpg" alt=" ">
+                <div class="text-overlay" href="Pages/Projects/Empty/EmptyProjectPage.html">
+                    <div class="text-container">
+                    <div class="text">
+                        <b>Icons</b><br/>
+                        Many tiles/'polaroids' have icons displayed inside the white area.<br/>
+                        These icons are used to give information about the tile or the project it prepresents.<br/>
+                        <object><a class="subtle-link" href="Pages/Site/IconExplanation.html" target="_blank">List of icons and their meanings.</a></object>
                     </div>
                     </div>
                 </div>
@@ -110,6 +134,33 @@
                     <div class="text-container">
                     <div class="text">
                         FE
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </li>
+            
+            
+            
+        <!-- Dimension -->
+        <li class="polaroid_li">
+            <div class="polaroid-sideways" draggable="true" ondragstart="drag_pagePreview(event)">
+                <ul class="icon-list">
+                    <li><div class="cs-icon polaroid-icon"></div></li>
+                    <li><div class="unity-icon polaroid-icon"></div></li>
+                    <li><div class="datawarning-icon polaroid-icon"></div></li>
+                </ul>
+                <div class="creation-date">
+                    <p>11<br/>/2017</p>
+                </div>
+                <div class="hover-field">
+                <img src="Assets/Images/Projects/Unity/Dimension_Thumbnail.png" alt=" ">
+                <div class="text-overlay" href="Pages/Projects/Empty/EmptyProjectPage.html">
+                    <div class="text-container">
+                    <div class="text">
+                        Dimension<br/>
+                        <object><a class="subtle-link" href="Pages/Projects/Unity/Dimension.html" target="_blank">Read more.</a></object>
                     </div>
                     </div>
                 </div>
@@ -260,6 +311,8 @@
         
         
         
+        /*CreateIconTooltips*/
+        
         CheckForPC();
         
         ChangePolaroidDisplay();
@@ -268,6 +321,28 @@
         
         ReplaceContent();
                 
+        
+        
+        
+        function CreateIconTooltips(){
+            
+            var icon_dict = {};
+            
+            icon_dict["datawarning-icon"] = "Data warning";
+            
+            
+            for(var key in icon_dict){
+                var _elements = document.getElementsByClassName(key);
+                for (var i = 0; i < _elements.length; i++) {
+                    _elements[i].innerHTML =
+                    "<div class='tooltip'><span class='tooltiptext'>{0}</span></div>"
+                    ;
+                }
+            }
+            
+        }
+        
+        
         
         
         function CheckForPC(){
