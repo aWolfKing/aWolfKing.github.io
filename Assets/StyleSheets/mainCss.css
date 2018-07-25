@@ -306,6 +306,10 @@ li .polaroid-sideways{
     width: 300px;
 }
 
+.polaroid-sideways .hover-field.hover-active .text-overlay{
+    width: 300px;
+}
+
 .polaroid-sideways .text-overlay .text{
     color: #3E444C;
     /*color: transparent;*/
