@@ -170,6 +170,11 @@
     margin-left: 50px;
 }
 
+.polaroid_li.margin50px{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 
 li .polaroid-sideways{
     display: block;    
